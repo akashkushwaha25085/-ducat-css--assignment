@@ -1,6 +1,7 @@
-p{
-    background-color: brown;
-}
-body{
+h1{
+    color: blue;
     background-color: aqua;
+}
+p{
+    color: rgb(79, 226, 66);
 }
