@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+   *{
+      font-size: 30px;
+   }
+      .container{
+         margin: 20px;
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+         grid-template-rows: 100px 200px;
+         grid-template-areas: 
+         "nav nav"
+         "box1 box2";
+         gap: 20px;
+         
+      }
+      .nav1{
+            background-color: red;
+            grid-area: nav;
+        }
+      .box1 {
+            background-color: yellow;
+            grid-area: box1;
+        }
+      .box2 {
+            background-color: blue;
+            grid-area: box2;
+        }
+    
+
+            /* medium screen tablet  */
+        @media all and (min-width:700px) and (max-width:1000px){
+         .container{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:100px repeat(2, 200px);
+            grid-template-areas:
+            "nav nav" 
+            "box1 box2"
+           
+         }
+        
+        }
+          /* small screen tablet  */
+          @media all and (max-width:699px){
+            .container{
+               grid-template-columns:1fr;
+               grid-template-rows:100px repeat(4,200px);
+               grid-template-areas:
+               "nav"
+               "box1"
+               "box2"
+           
+            }
+          }
+         
+   </style>
+</head>
+<body>
+   <div class="container">
+      <div class="nav1">Navigation</div>
+      <div class="box1">left</div>
+      <div class="box2">right</div>
+    
+   </div>
+</body>
+</html>
